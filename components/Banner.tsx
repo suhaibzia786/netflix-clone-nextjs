@@ -2,8 +2,8 @@ import Image from "next/image";
 import {Movie} from "../typings";
 import {useEffect, useState} from "react";
 import {baseUrl} from "../constants/movie";
-import {FaPlay} from "react-icons/all";
-import {InformationCircleIcon} from "@heroicons/react/solid";
+// import {FaPlay} from "react-icons/all";
+import {InformationCircleIcon, PlayIcon} from "@heroicons/react/solid";
 
 interface Props {
     netflixOriginals: Movie[]
@@ -30,7 +30,8 @@ const Banner = ({netflixOriginals}: Props) => {
             <p className="max-w-xs text-xs text-shadow-md md:max-w-lg md:text-lg lg:max-w-2xl lg:text-2xl">{movie?.overview}</p>
             <div className="flex space-x-3">
                 <button className="bannerButton bg-white text-black">
-                    <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7"/>
+                    <PlayIcon className="h-4 w-4 text-black md:h-7 md:w-7"/>
+                    {/*<FaPlay className="h-4 w-4 text-black md:h-7 md:w-7"/>*/}
                     Play
                 </button>
                 <button className="bannerButton bg-[gray]/60">More Info <InformationCircleIcon
